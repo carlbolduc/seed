@@ -8,7 +8,7 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
 public class Post {
-    private long blogPostId;
+    private long postId;
     private String slug;
     private String titleEn;
     private String titleFr;
@@ -18,12 +18,12 @@ public class Post {
     private String contentFr;
     private Integer publishedOn;
 
-    public long getBlogPostId() {
-        return blogPostId;
+    public long getPostId() {
+        return postId;
     }
 
-    public void setBlogPostId(long blogPostId) {
-        this.blogPostId = blogPostId;
+    public void setPostId(long postId) {
+        this.postId = postId;
     }
 
     public String getSlug() {

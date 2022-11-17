@@ -22,11 +22,11 @@ public interface Dao {
     @RegisterBeanMapper(Policy.class)
     Policy findPolicyBySlug(@Bind("slug") String slug);
 
-    @SqlQuery("SELECT title_en, title_fr, slug, published_on FROM post WHERE slug <> '' AND category = 'blog-post' AND published_on < unixepoch() ORDER BY published_on DESC")
+    @SqlQuery("SELECT title_en, title_fr, slug, published_on FROM post WHERE slug <> '' AND published_on < unixepoch() ORDER BY published_on DESC")
     @RegisterBeanMapper(Post.class)
     List<Post> findBlogPosts();
 
-    @SqlQuery("SELECT title_en, title_fr, description_en, description_fr, content_en, content_fr, slug, published_on FROM post WHERE category = 'blog-post' AND published_on < unixepoch() AND slug = :slug")
+    @SqlQuery("SELECT title_en, title_fr, description_en, description_fr, content_en, content_fr, slug, published_on FROM post WHERE published_on < unixepoch() AND slug = :slug")
     @RegisterBeanMapper(Post.class)
     Post findBlogPostBySlug(@Bind("slug") String slug);
 

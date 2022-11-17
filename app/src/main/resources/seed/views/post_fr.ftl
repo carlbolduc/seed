@@ -8,13 +8,13 @@
 <body>
 <@com.header l="fr"/>
 
-<main class="blog-post" itemprop="text">
+<main>
     <h1>${post.titleFr}</h1>
     <p style="font-style:italic;">Publié le ${formattedPublishedOn}</p>
     ${content?no_esc}
 </main>
 
-<@com.footer path="/post/${post.slug}" l="fr"/>
+<@com.footer path="/posts/${post.slug}" l="fr"/>
 </body>
 
 </html>

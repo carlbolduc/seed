@@ -8,7 +8,7 @@
 
 <main>
     <h1>Posts</h1>
-    <div class="container" id="past-blog-posts">
+    <div>
         <ul>
             <#list posts as post>
                 <li><a href="/posts/${post.slug}/">${post.listPublishedOn} - ${post.titleEn}</a></li>

@@ -6,7 +6,7 @@
 
 <body>
 <@com.header l="en"/>
-<main class="policy" itemprop="text">
+<main itemprop="text">
     <h1>${policy.titleEn}</h1>
     <p style="font-style:italic;">Last updated on ${lastUpdatedAt}</p>
     ${content?no_esc}
