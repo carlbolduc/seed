@@ -50,7 +50,7 @@
         </sql>
         <sql>
             insert into post (slug, title_en, title_fr, description_en, description_fr, content_en, content_fr, published_on, created_at, updated_at)
-            values ('first-post', 'First Post', 'Premier article', 'First Post', 'Premier article', '# Hello World!', '# Bonjour, Monde!', unixepoch(), unixepoch(), unixepoch())
+            values ('first-post', 'First Post', 'Premier article', 'First Post', 'Premier article', '# Hello, World!', '# Bonjour, Monde!', unixepoch(), unixepoch(), unixepoch())
         </sql>
     </changeSet>
 </databaseChangeLog>
