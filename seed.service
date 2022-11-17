@@ -1,0 +1,15 @@
+[Unit]
+Description=Seed
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/environment
+Type=simple
+User=carl
+WorkingDirectory=/home/ubuntu/seed
+ExecStart=/bin/bash -lc 'java -Xms512m -Xmx512m -jar seed.jar server config.yml'
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

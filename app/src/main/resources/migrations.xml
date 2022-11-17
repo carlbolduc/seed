@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+    <changeSet id="1" author="seed">
+        <sql>
+            CREATE TABLE policy
+            (
+                policy_id      INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                slug           TEXT UNIQUE,
+                title_en       TEXT,
+                title_fr       TEXT,
+                description_en TEXT,
+                description_fr TEXT,
+                content_en     TEXT,
+                content_fr     TEXT,
+                display_order  INTEGER,
+                published      INTEGER,
+                created_at     INTEGER,
+                created_by     TEXT,
+                updated_at     INTEGER,
+                updated_by     TEXT
+            );
+            CREATE TABLE post
+            (
+                post_id        INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                slug           TEXT UNIQUE,
+                title_en       TEXT,
+                title_fr       TEXT,
+                description_en TEXT,
+                description_fr TEXT,
+                content_en     TEXT,
+                content_fr     TEXT,
+                category       TEXT,
+                published_on   INTEGER,
+                created_at     INTEGER,
+                created_by     TEXT,
+                updated_at     INTEGER,
+                updated_by     TEXT
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

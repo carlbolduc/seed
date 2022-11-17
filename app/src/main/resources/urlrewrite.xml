@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite
+        PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+    <rule>
+        <from>^/index.html</from>
+        <to type="redirect">/</to>
+    </rule>
+    <rule>
+        <from>^/index-fr.html</from>
+        <to type="redirect">/?l=fr</to>
+    </rule>
+    <rule>
+        <from>^/about.html</from>
+        <to type="redirect">/about</to>
+    </rule>
+    <rule>
+        <from>^/about-fr.html</from>
+        <to type="redirect">/about?l=fr</to>
+    </rule>
+</urlrewrite>
