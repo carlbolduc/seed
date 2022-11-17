@@ -35,13 +35,22 @@
                 description_fr TEXT,
                 content_en     TEXT,
                 content_fr     TEXT,
-                category       TEXT,
                 published_on   INTEGER,
                 created_at     INTEGER,
                 created_by     TEXT,
                 updated_at     INTEGER,
                 updated_by     TEXT
             );
+        </sql>
+    </changeSet>
+    <changeSet id="2" author="seed">
+        <sql>
+            insert into policy (slug, title_en, title_fr, description_en, description_fr, content_en, content_fr, display_order, published, created_at, updated_at)
+            values ('privacy', 'Privacy Policy', 'Politique de confidentialité', 'Privacy Policy', 'Politique de confidentialité', 'The privacy of your data', 'La confidentialité de vos données', 1, 1, unixepoch(), unixepoch())
+        </sql>
+        <sql>
+            insert into post (slug, title_en, title_fr, description_en, description_fr, content_en, content_fr, published_on, created_at, updated_at)
+            values ('first-post', 'First Post', 'Premier article', 'First Post', 'Premier article', '# Hello World!', '# Bonjour, Monde!', unixepoch(), unixepoch(), unixepoch())
         </sql>
     </changeSet>
 </databaseChangeLog>
